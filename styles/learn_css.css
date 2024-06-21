@@ -1,0 +1,40 @@
+h1 {
+    color: red;
+}
+
+p,
+li {
+    color: green;
+}
+
+/* 标签选择符: 仅选择<li> */
+li {
+    list-style-type: "\1F44D";
+}
+
+/* 类选择符: 仅选择class="special"的元素 */
+.special {
+    color: blue;
+}
+
+/*  包含选择符: 仅选择嵌套在<li> 元素内的<em> */
+li em {
+    color: rebeccapurple;
+}
+
+/* 兄弟选择符: 仅选择紧邻在<h1> 之后的<p> */
+h1+p {
+    color: yellowgreen;
+}
+
+/* 属性选择符: 仅选择<a> 且有link属性的元素， */
+a:link {
+    color: pink;
+}
+
+/* 组合选择 在 <body> 之内，紧接在 <h1> 后面的 <p> 元素的内部，类名为 special。*/
+body h1 + p .special {
+    color: yellow;
+    background-color: black;
+    padding: 5px;
+}
