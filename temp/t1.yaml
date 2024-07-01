@@ -1,0 +1,36 @@
+llm_params: [{'name': '清洁模式', 'type': 'enum', 'value': '扫地'}] api_request:
+task:
+  map_id: 1
+  items:
+  - zone:
+      zone_type: 3
+      zone_id: 1
+      selection_bounds:
+      - x: 0
+        y: 0
+      cleaning_bounds:
+      - x: 0
+        y: 0
+    param:
+      mode: 2  # 清洁模式, 必填, 可取的值是[0, 2, 3, 4, 5],0是忽略，1是忽略,2是扫地,3是拖地,4是边扫边拖,5是先扫后拖,
+      fan_level: 2
+      mop_strength_level: 1
+      mop_humidity: 2
+      sweep_time: 1
+      mop_time: 1
+      sweep_mop_sync_time: 1
+      overlap_level: 1
+      enable_smart_mode: false
+      enable_heavy_dirty_clean: false
+    order: 0
+  option:
+    enable_smart_mode: false
+    is_need_rebuild_map: false
+    is_calibration: false
+    enable_smart_deep_clean: false
+    enable_maintain_after_clean: false
+    build_new_map_before_clean: false
+  extra: ''
+  task_type: 1 # 必填，任务类型，表示当前执行哪种任务, 可取的值是[0, 1, 2, 3, 4, 5, 6, 7],1是扫地,2是拖地,3是先扫后拖,4是扫拖同时,5是定制清洁,6是快捷任务,7是定时任务,
+  debug_option:
+    enable_only_clean_door: false

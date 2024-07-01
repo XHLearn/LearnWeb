@@ -1,0 +1,38 @@
+llm_params: [{'name': '扫地风力', 'type': 'enum', 'value': '降噪'}] api_request:
+task:
+  map_id: 1
+  items:
+  - zone:
+      zone_type: 3
+      zone_id: 1
+      selection_bounds:
+      - x: 0
+        y: 0
+      cleaning_bounds:
+      - x: 0
+        y: 0
+    param:
+      mode: 2
+      fan_level: 1 # 风力等级, 可取的值是[0, 1, 2, 3, 4, 5],0是未定义,用以提示新增值的扩展,1是降噪,2是标准,3是强力,4是深度,5是超强,
+      mop_strength_level: 1
+      mop_humidity: 2
+      sweep_time: 1
+      mop_time: 1
+      sweep_mop_sync_time: 1
+      overlap_level: 1
+      enable_smart_mode: false
+      enable_heavy_dirty_clean: false
+    order: 0
+  option:
+    enable_smart_mode: false
+    is_need_rebuild_map: false
+    is_calibration: false
+    enable_smart_deep_clean: false
+    enable_maintain_after_clean: false
+    build_new_map_before_clean: false
+  extra: ''
+  task_type: 0
+  debug_option:
+    enable_only_clean_door: false
+custom_info:
+  start_voice: ''

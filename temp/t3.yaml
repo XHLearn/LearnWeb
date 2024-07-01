@@ -1,3 +1,4 @@
+llm_params: [{'name': '清洁模式', 'type': 'enum', 'value': '扫地'}, {'name': '扫地风力', 'type': 'enum', 'value': '降噪'}] api_request:
 task:  # 描述一个清洁任务
   map_id: 1  # 地图id
   items: # 清洁单元数组
